@@ -73,7 +73,7 @@ namespace cis237_assignment3
         private void PrintMenu()
         {
             Output("Please Select an Option \n----------------" + Environment.NewLine);
-            Output("1. Load Beverage List\n2. Print Beverage List\n3. Search by ID\n4. Add Beverage\n5. Exit\n" + Environment.NewLine);
+            Output("1. Add Droid\n2. Print Droid List\n3. Search by ID\n4. Add Beverage\n5. Exit\n" + Environment.NewLine);
             Output("> ", false);
         }
     }
