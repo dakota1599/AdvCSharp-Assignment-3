@@ -40,7 +40,7 @@ namespace cis237_assignment3
         /// </summary>
         public override void CalculateTotalCost()
         {
-            int droidAttachmentCost = 0;
+            int droidAttachmentCost = 0; //HOLDS COST OF ADDED DROID COMPONENTS
 
             if (toolBox)
                 droidAttachmentCost += 10;

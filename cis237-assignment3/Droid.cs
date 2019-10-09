@@ -58,6 +58,7 @@ namespace cis237_assignment3
         protected void CalculateBaseCost() {
             int materialCost;
             int colorCost;
+            //CASE STRUCTURE FOR CALCULATING PRICE OF MATERIAL.
             switch (this.material) {
                 case "steel":
                     materialCost = 10;
@@ -73,6 +74,7 @@ namespace cis237_assignment3
                     break;
             }
 
+            //CASE STRUCTURE FOR CALCULATING PRICE OF COLOR.
             switch (this.color) {
                 case "black":
                     colorCost = 10;
@@ -91,6 +93,7 @@ namespace cis237_assignment3
                     break;
             }
 
+            //ADDS TO BASE COST.
             baseCost = materialCost + colorCost;
         }
     }
