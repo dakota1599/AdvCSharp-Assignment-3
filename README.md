@@ -3,6 +3,7 @@
 ## Due: 10-15-2019
 
 ## Author
+Dakota Shapiro | Date Last Modified: 10/13/19
 
 
 
@@ -130,7 +131,8 @@ It may be beneficial for you to create extra methods within the droid sub classe
 | **Total**                  | **100**|
 
 ## Outside Resources Used
-
+N/A
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
+N/A
