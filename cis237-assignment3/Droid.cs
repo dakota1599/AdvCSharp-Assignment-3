@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ DAKOTA SHAPIRO
+ CIS 237 T/TH 3:30-5:45
+ LAST MODIFIED: 10/13/19
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +31,7 @@ namespace cis237_assignment3
             this.color = col;
             this.DroidID = dId;
 
-            CalculateBaseCost();
+            CalculateBaseCost(); //CALL METHOD
         }
 
 
@@ -35,11 +41,13 @@ namespace cis237_assignment3
             set { _totalCost = value; }
         }
         
+        //ID FOR SEARCHING FOR DROIDS.
         public string DroidID {
             get { return _droidId; }
             set { _droidId = value; }
         }
 
+        //THIS ALLOWS FOR CHILD CLASSES TO SET THEIR OWN DROID TYPES.
         protected string DroidType {
             get { return _droidType; }
             set { _droidType = value; }

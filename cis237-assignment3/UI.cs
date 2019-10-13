@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ DAKOTA SHAPIRO
+ CIS 237 T/TH 3:30-5:45
+ LAST MODIFIED: 10/13/19
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,7 +83,7 @@ namespace cis237_assignment3
         private void PrintMenu()
         {
             Output("Please Select an Option \n----------------" + Environment.NewLine);
-            Output("1. Add Droid\n2. Print Droid List\n3. Exit" + Environment.NewLine);
+            Output("1. Add Droid\n2. Print Droid List\n3. Search\n4. Exit" + Environment.NewLine);
             Output("> ", false);
         }
 
