@@ -13,12 +13,17 @@ namespace cis237_assignment3
         protected int numberShips;
         protected const int COST_PER_SHIP = 20;
 
+
         //CONSTRUCTORS
         public AstromechDroid(string mat, string col, string dId, bool tBox, bool compCon, bool arm, bool fire, int ships) :
             base(mat, col, dId, tBox, compCon, arm)
         {
             this.fireExtinquisher = fire;
             this.numberShips = ships;
+
+            CalculateTotalCost(); //CALLS METHOD
+            DroidType = "Astromech"; //SETS DROID TYPE
+
         }
 
         //METHODS

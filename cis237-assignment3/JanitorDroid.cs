@@ -20,6 +20,7 @@ namespace cis237_assignment3
             this.vacuum = vac;
 
             CalculateTotalCost(); //CALLS METHOD
+            DroidType = "Janitor"; //SETS DROID TYPE
         }
 
         //METHODS
@@ -31,7 +32,7 @@ namespace cis237_assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return base.ToString() + string.Format("Trash: {0}\nVacuum: {1}\n",trashCompactor,vacuum);
+            return base.ToString() + string.Format("Trash: {0}\nVacuum: {1}\n", trashCompactor,vacuum);
         }
 
 

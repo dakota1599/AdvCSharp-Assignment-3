@@ -12,7 +12,7 @@ namespace cis237_assignment3
         protected bool toolBox;
         protected bool computerConnection;
         protected bool arm;
-
+       
         //CONSTRUCTOR
         public UtilityDroid(string mat, string col, string dId, bool tBox, bool compCon, bool arm) : base(mat, col, dId){
             this.toolBox = tBox;
@@ -20,6 +20,7 @@ namespace cis237_assignment3
             this.arm = arm;
 
             CalculateTotalCost(); //CALLS METHOD
+            DroidType = "Utility"; //SETS DROID TYPE
         }
 
 
@@ -31,8 +32,8 @@ namespace cis237_assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return base.ToString() + string.Format("Tool Box: {0}\nComputer Connection: {1}\nArm: {2}",
-                toolBox, computerConnection, arm);
+            return base.ToString() + string.Format("Total Cost: {0}\nArm: {1}\nTool Box: {2}\nComputer Connection: {3}\n",
+                TotalCost, arm, toolBox, computerConnection);
         }
 
         /// <summary>

@@ -12,10 +12,12 @@ namespace cis237_assignment3
         private int numberLanguages;
         private const int COST_PER_LANGUAGE = 10;
 
+
         //CONSTRUCTORS
         public ProtocolDroid(string mat, string col, string dId, int numLang) : base(mat, col, dId) {
             this.numberLanguages = numLang;
-            CalculateTotalCost();
+            CalculateTotalCost(); //CALLS METHOD
+            DroidType = "Protocol"; //SETS DROID TYPE
         }
 
         //METHODS
@@ -25,7 +27,7 @@ namespace cis237_assignment3
         /// </summary>
         public override string ToString()
         {
-            return base.ToString() + String.Format("Total Cost: {0}\n",TotalCost);
+            return base.ToString() + String.Format("Total Cost: {0}\n", TotalCost);
         }
 
         /// <summary>
