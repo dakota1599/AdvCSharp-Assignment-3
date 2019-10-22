@@ -44,12 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AstromechDroid.cs" />
     <Compile Include="Droid.cs" />
+    <Compile Include="DroidCollection.cs" />
     <Compile Include="IDroid.cs" />
+    <Compile Include="JanitorDroid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtocolDroid.cs" />
     <Compile Include="UI.cs" />
+    <Compile Include="UtilityDroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
