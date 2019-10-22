@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ DAKOTA SHAPIRO
+ CIS 237 T/TH 3:30-5:45
+ LAST MODIFIED: 10/13/19
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +26,7 @@ namespace cis237_assignment3
             this.vacuum = vac;
 
             CalculateTotalCost(); //CALLS METHOD
+            DroidType = "Janitor"; //SETS DROID TYPE
         }
 
         //METHODS
@@ -31,7 +38,7 @@ namespace cis237_assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return base.ToString() + string.Format("Trash: {0}\nVacuum: {1}\n",trashCompactor,vacuum);
+            return base.ToString() + string.Format("Trash: {0}\nVacuum: {1}\n", trashCompactor,vacuum);
         }
 
 

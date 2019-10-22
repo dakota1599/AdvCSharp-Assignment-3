@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ DAKOTA SHAPIRO
+ CIS 237 T/TH 3:30-5:45
+ LAST MODIFIED: 10/13/19
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +20,10 @@ namespace cis237_assignment3
         protected decimal baseCost;
         protected decimal _totalCost;
 
-        protected string _droidType = "Droid"; //THE TYPE OF DROID
         protected string _droidId; //THE ID FOR IDENTIFYING THE DROID
+
+        protected string _droidType = "Droid"; //THE TYPE OF DROID
+
 
         //CONSTRUCTOR
         public Droid(string mat, string col, string dId) {
@@ -23,7 +31,7 @@ namespace cis237_assignment3
             this.color = col;
             this.DroidID = dId;
 
-            CalculateBaseCost();
+            CalculateBaseCost(); //CALL METHOD
         }
 
 
@@ -33,10 +41,16 @@ namespace cis237_assignment3
             set { _totalCost = value; }
         }
         
-        public string DroidType { get { return _droidType; } }
+        //ID FOR SEARCHING FOR DROIDS.
         public string DroidID {
             get { return _droidId; }
             set { _droidId = value; }
+        }
+
+        //THIS ALLOWS FOR CHILD CLASSES TO SET THEIR OWN DROID TYPES.
+        protected string DroidType {
+            get { return _droidType; }
+            set { _droidType = value; }
         }
 
 
@@ -46,7 +60,7 @@ namespace cis237_assignment3
 
         public override string ToString()
         {
-            return String.Format("ID: {0}\nType: {1}\nMaterial: {2}\nColor: {3}\nBase Cost: {4}\n",DroidID, DroidType, material, color, baseCost);
+            return String.Format("ID: {0}\nType: {4}\nMaterial: {1}\nColor: {2}\nBase Cost: {3}\n",DroidID, material, color, baseCost, DroidType);
         }
 
 
@@ -59,7 +73,7 @@ namespace cis237_assignment3
             int materialCost;
             int colorCost;
             //CASE STRUCTURE FOR CALCULATING PRICE OF MATERIAL.
-            switch (this.material) {
+            switch (this.material.ToLower()) {
                 case "steel":
                     materialCost = 10;
                     break;
@@ -75,7 +89,7 @@ namespace cis237_assignment3
             }
 
             //CASE STRUCTURE FOR CALCULATING PRICE OF COLOR.
-            switch (this.color) {
+            switch (this.color.ToLower()) {
                 case "black":
                     colorCost = 10;
                     break;

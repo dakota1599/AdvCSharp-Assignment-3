@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ DAKOTA SHAPIRO
+ CIS 237 T/TH 3:30-5:45
+ LAST MODIFIED: 10/13/19
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +19,17 @@ namespace cis237_assignment3
         protected int numberShips;
         protected const int COST_PER_SHIP = 20;
 
+
         //CONSTRUCTORS
         public AstromechDroid(string mat, string col, string dId, bool tBox, bool compCon, bool arm, bool fire, int ships) :
             base(mat, col, dId, tBox, compCon, arm)
         {
             this.fireExtinquisher = fire;
             this.numberShips = ships;
+
+            CalculateTotalCost(); //CALLS METHOD
+            DroidType = "Astromech"; //SETS DROID TYPE
+
         }
 
         //METHODS
